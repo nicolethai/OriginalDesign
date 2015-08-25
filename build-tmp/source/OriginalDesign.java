@@ -23,7 +23,9 @@ int mouseY = SCREEN_HEIGHT/2;
 public void setup()
 {
 	size(SCREEN_WIDTH, SCREEN_HEIGHT);
+	noLoop();
 }
+
 public void draw()
 {
 	background(150);
@@ -37,7 +39,12 @@ public void mouse()
 	ellipse (mouseX, mouseY, 45, 30);
 	noFill();
 	stroke(0);
-	bezier(mouseX + 15, mouseY, mouseX+50, mouseY+5, mouseX+55, mouseY-5, mouseX+60, mouseY);
+	bezier(mouseX + 22, mouseY, mouseX+30, mouseY+5, mouseX+45, mouseY-5, mouseX+50, mouseY);
+	mouseX = mouseX + 100;
+	mouseY = mouseY + 100;
+	System.out.println(mouseX);
+	// System.out.println();
+
 	// nose/mouth area
 	// fill(0);
 	// beginShape();
@@ -45,6 +52,11 @@ public void mouse()
 	// 	vertex(mouseX-40, mouseY+15);
 	// 	vertex(mouseX-20, mouseY+20);
 	// endShape(CLOSE);
+}
+
+public void mouseClicked()
+{
+	redraw();
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "OriginalDesign" };

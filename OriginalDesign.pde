@@ -7,7 +7,9 @@ int mouseY = SCREEN_HEIGHT/2;
 void setup()
 {
 	size(SCREEN_WIDTH, SCREEN_HEIGHT);
+	noLoop();
 }
+
 void draw()
 {
 	background(150);
@@ -21,7 +23,12 @@ void mouse()
 	ellipse (mouseX, mouseY, 45, 30);
 	noFill();
 	stroke(0);
-	bezier(mouseX + 15, mouseY, mouseX+50, mouseY+5, mouseX+55, mouseY-5, mouseX+60, mouseY);
+	bezier(mouseX + 22, mouseY, mouseX+30, mouseY+5, mouseX+45, mouseY-5, mouseX+50, mouseY);
+	mouseX = mouseX + 100; // to rand positions.
+	mouseY = mouseY + 100;
+
+	// System.out.println();
+
 	// nose/mouth area
 	// fill(0);
 	// beginShape();
@@ -29,4 +36,9 @@ void mouse()
 	// 	vertex(mouseX-40, mouseY+15);
 	// 	vertex(mouseX-20, mouseY+20);
 	// endShape(CLOSE);
+}
+
+void mouseClicked()
+{
+	redraw();
 }
