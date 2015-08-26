@@ -17,8 +17,9 @@ public class OriginalDesign extends PApplet {
 int SCREEN_WIDTH = 500;
 int SCREEN_HEIGHT = 500;
 
-int mouseX = SCREEN_WIDTH/2;
-int mouseY = SCREEN_HEIGHT/2;
+float mouseX = SCREEN_WIDTH/2;
+float mouseY = SCREEN_HEIGHT/2;
+
 
 public void setup()
 {
@@ -40,9 +41,12 @@ public void mouse()
 	noFill();
 	stroke(0);
 	bezier(mouseX + 22, mouseY, mouseX+30, mouseY+5, mouseX+45, mouseY-5, mouseX+50, mouseY);
-	mouseX = mouseX + 100;
-	mouseY = mouseY + 100;
-	System.out.println(mouseX);
+	// mouseX = mouseX + 100; // to rand positions.
+	// mouseY = mouseY + 100;
+
+	mouseX = Math.random() * SCREEN_WIDTH;
+	mouseY = Math.random() * SCREEN_HEIGHT;
+
 	// System.out.println();
 
 	// nose/mouth area
