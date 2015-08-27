@@ -14,6 +14,7 @@ import java.io.IOException;
 
 public class OriginalDesign extends PApplet {
 
+/*
 int SCREEN_WIDTH = 500;
 int SCREEN_HEIGHT = 500;
 
@@ -21,19 +22,19 @@ float mouseX = SCREEN_WIDTH/2;
 float mouseY = SCREEN_HEIGHT/2;
 
 
-public void setup()
+void setup()
 {
 	size(SCREEN_WIDTH, SCREEN_HEIGHT);
 	noLoop();
 }
 
-public void draw()
+void draw()
 {
 	background(150);
 	mouse();
 }
 
-public void mouse()
+void mouse()
 {
 	noStroke();
 	fill(255, 255, 150, 100);
@@ -58,10 +59,52 @@ public void mouse()
 	// endShape(CLOSE);
 }
 
-public void mouseClicked()
+void mouseClicked()
 {
 	redraw();
 }
+*/
+
+
+//float x = mouseX; //250;
+//float y = mouseY; //250;
+
+//int randRGB = 255; // test
+int randR = (int)(Math.random() * 255);
+int randG = (int)(Math.random() * 255);
+int randB = (int)(Math.random() * 255);
+
+public void setup()
+{
+  size(500, 500);
+  noLoop();
+  background(0);
+
+}
+
+public void draw()
+{
+  circles();
+}
+
+public void circles()
+{
+//  randRGB = (int)(Math.random() * 255); // test
+  randR = (int)(Math.random() * 255);
+  randG = (int)(Math.random() * 255);
+  randB = (int)(Math.random() * 255);
+  noFill();
+  stroke(randR, randG, randB);
+  ellipse(mouseX, mouseY, 25, 25);
+//  x = (float)((Math.random() * 400) + 10);
+//  y = (float)((Math.random() * 400) + 16);
+
+}
+
+//void mouseClicked()
+//{
+//  redraw();
+//}
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "OriginalDesign" };
     if (passedArgs != null) {
