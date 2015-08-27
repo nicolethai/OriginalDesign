@@ -42,3 +42,8 @@ void mouseMoved()
 {
   circles();
 }
+
+void mouseClicked()
+{
+	setup();
+}
