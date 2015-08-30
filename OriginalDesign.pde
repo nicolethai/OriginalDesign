@@ -64,6 +64,11 @@ void draw()
   line(mouseX + 65, mouseY + 20, mouseX + 70, mouseY + 35);
 }
 
+void mouseMoved()
+{
+  redraw();
+}
+
 /********************************/
 
 
