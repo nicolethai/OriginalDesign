@@ -41,8 +41,8 @@ void mouseClicked()
 
 /******************************/
 
-int x = 200;
-int y = 200;
+// int x = 200;
+// int y = 200;
 
 void setup()
 {
@@ -55,13 +55,13 @@ void draw()
   background(0);
   noFill();
   stroke(255);
-  ellipse(x + 50, y + 50, 50, 50);
+  ellipse(mouseX + 50, mouseY + 50, 50, 50);
   // left
-  line(x + 30, y + 35, x + 35, y + 20);
-  line(x + 35, y + 20, x + 45, y + 25);
+  line(mouseX + 30, mouseY + 35, mouseX + 35, mouseY + 20);
+  line(mouseX + 35, mouseY + 20, mouseX + 45, mouseY + 25);
   //right
-  line(x + 55, y + 25, x + 65, y + 20);
-  line(x + 65, y + 20, x + 70, y + 35);
+  line(mouseX + 55, mouseY + 25, mouseX + 65, mouseY + 20);
+  line(mouseX + 65, mouseY + 20, mouseX + 70, mouseY + 35);
 }
 
 /********************************/
