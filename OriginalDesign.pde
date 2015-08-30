@@ -4,7 +4,7 @@ int randB = (int)(Math.random() * 255);
 
 void setup()
 {
-  size(500, 500);
+  size(750, 500);
   background(0);
 
 }

@@ -1,6 +1,7 @@
 
 body {
-    background-color: rgb(216,160,166);
+    background-image: url("http://www.imaginewestvirginia.com/images/header-DotPatt.jpg");
+    background-size: 100% 100%;
     color: rgb(0,0,0);
     font-family: "Open Sans", sans-serif;
     text-align: center;
