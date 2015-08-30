@@ -47,14 +47,18 @@ void mouseClicked()
 void setup()
 {
  size(500, 500); 
+ background(0);
  noLoop();
 }
 
 void draw()
 {
-  background(0);
   noFill();
   stroke(255);
+}
+
+void design()
+{
   ellipse(mouseX + 50, mouseY + 50, 50, 50);
   // left
   line(mouseX + 30, mouseY + 35, mouseX + 35, mouseY + 20);
@@ -66,7 +70,7 @@ void draw()
 
 void mouseMoved()
 {
-  redraw();
+  design();
 }
 
 /********************************/
