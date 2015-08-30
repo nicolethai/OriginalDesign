@@ -1,4 +1,4 @@
-/******************************
+/******************************/
 
 int randR = (int)(Math.random() * 255);
 int randG = (int)(Math.random() * 255);
@@ -20,16 +20,20 @@ void draw()
   stroke(randR, randG, randB);
 }
 
-void circles()
+void design()
 {
-
-  ellipse(mouseX, mouseY, 25, 25);
-
+  ellipse(mouseX + 50, mouseY + 50, 25, 25);
+  // left
+  line(mouseX + 30, mouseY + 35, mouseX + 35, mouseY + 20);
+  line(mouseX + 35, mouseY + 20, mouseX + 45, mouseY + 25);
+  //right
+  line(mouseX + 55, mouseY + 25, mouseX + 65, mouseY + 20);
+  line(mouseX + 65, mouseY + 20, mouseX + 70, mouseY + 35);
 }
 
 void mouseMoved()
 {
-  circles();
+  design();
 }
 
 void mouseClicked()
@@ -37,9 +41,9 @@ void mouseClicked()
 	setup();
 }
 
-********************************/
+/********************************/
 
-/******************************/
+/******************************
 
 // int x = 200;
 // int y = 200;
@@ -59,7 +63,7 @@ void draw()
 
 void design()
 {
-  ellipse(mouseX + 50, mouseY + 50, 50, 50);
+  ellipse(mouseX + 50, mouseY + 50, 25, 25);
   // left
   line(mouseX + 30, mouseY + 35, mouseX + 35, mouseY + 20);
   line(mouseX + 35, mouseY + 20, mouseX + 45, mouseY + 25);
@@ -73,6 +77,6 @@ void mouseMoved()
   design();
 }
 
-/********************************/
+********************************/
 
 
